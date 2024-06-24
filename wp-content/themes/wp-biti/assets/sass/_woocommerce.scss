@@ -1,0 +1,233 @@
+.woocommerce {
+  ul.products {
+    li.product {
+      border: 1px solid #dee2e6;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s;
+
+      a img {
+        object-fit: contain;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #dee2e6;
+        margin-bottom: 1.5rem;
+        @media (max-width: 575px) {
+          height: 200px;
+        }
+      }
+      .woocommerce-loop-product__title {
+        color: $text-color;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 4px;
+        padding: 0 4px;
+        font-weight: 700;
+        @extend .limit-text;
+      }
+      .star-rating {
+        margin: 0 auto 8px;
+        font-size: 14px;
+      }
+      .ingredient-wine {
+        font-size: 1rem;
+        color: $text-color;
+        font-weight: 700;
+        text-align: center;
+        @extend .limit-text;
+      }
+      .product-brand {
+        margin-bottom: 1rem;
+        color: $text-color;
+        text-align: center;
+      }
+      a.product_type_simple {
+        position: absolute;
+        width: 100%;
+        top: 300px;
+        margin-top: 0;
+        padding: 0 1rem;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 0;
+        color: #fff;
+        background: rgba($color: $main-color, $alpha: 0.8);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.6s;
+        z-index: 9;
+        &.loading:after {
+          top: 0;
+          right: 2rem;
+        }
+        @media screen and (max-width: 575px) {
+          font-size: 12px;
+          padding: 0;
+        }
+      }
+      a.added_to_cart {
+        // position: absolute;
+        // width: 100%;
+        // top: calc(300px - 40px);
+        // margin-top: 0;
+        // padding: 0 1rem;
+        // text-align: center;
+        // height: 40px;
+        // line-height: 40px;
+        // border-radius: 0;
+        // color: #fff;
+        // background: #6a4246;
+        // font-weight: 700;
+        // transition: all 0.6s;
+        // z-index: 10;
+        // &:after {
+        //     font-family: WooCommerce;
+        //     content: "\e017";
+        //     margin-left: 0.53em;
+        //     vertical-align: bottom;
+        // }
+        display: none;
+      }
+      &:hover {
+        border-color: $main-color;
+        a.product_type_simple {
+          visibility: visible;
+          opacity: 1;
+        }
+        .woocommerce-loop-product__title {
+          color: $main-color;
+        }
+        .ingredient-wine {
+          color: $main-color;
+        }
+        .product-brand {
+          margin-bottom: 1rem;
+          color: $main-color;
+        }
+      }
+    }
+  }
+  .star-rating span:before {
+    color: #ffce31;
+  }
+  .woocommerce-ordering select {
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #dee2e6;
+  }
+  &-breadcrumb {
+    display: none;
+  }
+  &-cart {
+    .wc-proceed-to-checkout a.checkout-button {
+      background-color: $button-color;
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+    table.cart td.actions .coupon .input-text {
+      max-width: 170px;
+      width: 100%;
+    }
+  }
+  table.cart td.actions .coupon {
+    display: flex;
+  }
+  &-message {
+    border-top-color: $gold-color;
+    &:before {
+      color: $gold-color;
+    }
+    a.button {
+      background-color: $main-color;
+      color: #fff;
+      &:hover {
+        background-color: $dark-main-color;
+        color: #fff;
+      }
+    }
+  }
+  p.stars a {
+    color: #ffce31;
+    font-size: 1rem;
+  }
+  nav.woocommerce-pagination {
+    border: none;
+    margin: 0;
+    ul {
+      margin: 0;
+      display: inline-flex;
+      border: none;
+      height: 32px;
+      li {
+        display: inline-flex !important;
+        border-right: none;
+        .page-numbers {
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          padding: 0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 600;
+          color: #515151;
+          &.current {
+            background: $main-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &-address-fields {
+    &__field-wrapper {
+      .form-row {
+        input.input-text {
+          border: 1px solid #c4c4c4;
+          border-radius: 5px;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+}
+.woocommerce-page {
+  &.woocommerce ul.products li.product {
+    min-height: 436px;
+    @media (max-width: 1400px) {
+      min-height: 395px;
+    }
+    @media (max-width: 1200px) {
+      min-height: 353px;
+    }
+    @media (max-width: 767px) {
+      min-height: 373px;
+    }
+    @media (max-width: 575px) {
+      min-height: 326px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .woocommerce {
+    ul.products {
+      li.product {
+        .woocommerce-loop-product__title {
+          font-size: 16px;
+        }
+        .ingredient-wine {
+          font-size: 14px;
+        }
+        a img {
+          margin-bottom: 1rem;
+        }
+        .product-brand {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

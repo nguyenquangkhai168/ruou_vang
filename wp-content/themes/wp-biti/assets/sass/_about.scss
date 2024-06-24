@@ -1,0 +1,412 @@
+#gioi-thieu {
+  .banner {
+    position: relative;
+    height: 450px;
+    &--text {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      color: #fff;
+      text-align: center;
+      h1,
+      h2 {
+        font-weight: 600;
+        font-size: 36px;
+      }
+    }
+    &--button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #fff;
+      color: $main-color;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 36px;
+      border-radius: 10px;
+      &:hover {
+        background-color: $main-color;
+        color: #fff;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000000c7;
+    }
+  }
+  .sub-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $main-color;
+  }
+  .title {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 13px 0;
+  }
+  .desc {
+    font-size: 14px;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 23px;
+    background-color: $main-color;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 36px;
+    border-radius: 10px;
+  }
+  .smell {
+    padding: 65px 0;
+    &--image {
+      border-radius: 15px;
+    }
+  }
+  .producer {
+    background-color: #f4f4f4;
+    padding: 65px 0;
+    &__header {
+      &--title {
+        text-transform: unset;
+      }
+    }
+    &__body {
+      margin-top: 30px;
+      &--item {
+        padding: 10px;
+        border-radius: 15px;
+        background-color: white;
+        transition: 0.5s;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        &:hover {
+          transform: scale(1.05);
+        }
+        img {
+          height: 180px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .review {
+    background-color: #000;
+    &--content {
+      padding: 18px;
+      font-size: 18px;
+      background-color: #fff;
+      color: $main-color;
+      border-radius: 15px;
+      &__icon {
+        font-size: 36px;
+      }
+      &__text {
+        margin: 10px 0 20px;
+      }
+      &__name {
+        font-weight: 600;
+      }
+    }
+    .owl-carousel {
+      margin: auto;
+      .owl-dots {
+        text-align: center;
+        margin-top: 25px;
+        button.owl-dot {
+          height: 12px;
+          width: 12px;
+          border: 0.5px solid #fff;
+          border-radius: 50%;
+          margin: 0 5px;
+          &.active {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .choice {
+    padding: 65px 0;
+    &--image {
+      border-radius: 15px;
+    }
+  }
+  .discover {
+    background-color: #f4f4f4;
+    padding: 65px 0;
+    &__header {
+      &--title {
+        text-transform: unset;
+      }
+    }
+    &__body {
+      margin-top: 30px;
+      &--item {
+        border: 0.5px solid #818181;
+        border-radius: 7px;
+        padding: 12px 0;
+        transition: 0.5s;
+        .image-item {
+          height: 50px;
+          width: 50px;
+          margin-right: 20px;
+        }
+        .name-item {
+          text-transform: uppercase;
+          font-size: 18px;
+          color: #818181;
+        }
+        &:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          transform: scale(1.05);
+          .name-item {
+            font-weight: 600;
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+  .register {
+    background-image: url("../images/img-gioi-thieu/gioi-thieu-register.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &--content {
+      height: 500px;
+      &__title {
+        color: #fff;
+        text-transform: unset;
+        z-index: 2;
+      }
+      &__button {
+        background-color: #fff;
+        z-index: 2;
+        color: $main-color;
+        &:hover {
+          background-color: $main-color;
+          color: #fff;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000000c7;
+    }
+  }
+}
+.pop-up-about {
+  // position: fixed;
+  border-radius: 15px;
+  width: calc(100vw - 150px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 8;
+  background-position: bottom;
+  background-size: cover;
+  &--info {
+    background: linear-gradient(
+      180deg,
+      rgba($color: $main-color, $alpha: 0) 0%,
+      rgba($color: $main-color, $alpha: 0.5) 23.3%,
+      rgba($color: $main-color, $alpha: 1) 60.81%
+    );
+    padding: 0px 10px 50px;
+    margin-top: 200px;
+    z-index: 10;
+    border-radius: 15px;
+    pointer-events: none;
+
+    &__image {
+      img {
+        height: auto;
+      }
+    }
+    &__content {
+      color: #fff;
+      .title {
+        font-size: 36px;
+        margin-bottom: 24px;
+        span {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 40px;
+        }
+      }
+      .desc {
+        font-size: 18px;
+      }
+    }
+  }
+  &_close {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    border-radius: 2px;
+    background: none;
+    border: 0;
+    font-size: 25px;
+    padding: 0 10px;
+    font-size: 40px;
+    color: $text-color;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  #gioi-thieu {
+    .banner {
+      height: 160px;
+      &--text {
+        h1,
+        h2 {
+          font-size: 24px;
+        }
+      }
+      &--button {
+        margin-top: 10px;
+        font-size: 12px;
+        padding: 7px 21px;
+      }
+    }
+    .sub-title {
+      font-size: 12px;
+    }
+    .title {
+      font-size: 24px;
+    }
+    .desc {
+      font-size: 12px;
+    }
+    .button {
+      margin-top: 12px;
+      font-size: 14px;
+      padding: 7px 21px;
+    }
+    .smell {
+      padding: 45px 0;
+    }
+    .producer {
+      padding: 45px 0;
+      &__body {
+        margin-top: 24px;
+        &--item {
+          img {
+            height: 90px;
+          }
+        }
+      }
+    }
+    .review {
+      background-color: unset;
+      &--content {
+        padding: 12px;
+        font-size: 14px;
+        border: 0.5px solid rgba(0, 0, 0, 0.3);
+
+        &__icon {
+          font-size: 24px;
+        }
+        &__text {
+          margin: 6px 0 12px;
+          text-align: start;
+        }
+      }
+      .col-md-6:nth-child(1) {
+        background-color: #000;
+      }
+      .col-md-6:nth-child(2) {
+        background-color: white;
+        .include-carosel {
+          margin-top: -80px;
+        }
+      }
+      .owl-carousel {
+        margin: auto;
+        .owl-dots {
+          margin-top: 15px;
+          button.owl-dot {
+            height: 8px;
+            width: 8px;
+            border: 0.5px solid $main-color;
+            margin: 0 3px;
+            &.active {
+              background-color: $main-color;
+            }
+          }
+        }
+      }
+    }
+    .choice {
+      padding: 45px 0;
+    }
+    .discover {
+      padding: 45px 0;
+      &__body {
+        margin-top: 24px;
+        &--item {
+          border-radius: 3px;
+          padding: 6px 0;
+          transition: 0.5s;
+          .image-item {
+            height: 25px;
+            width: 25px;
+            margin-right: 10px;
+          }
+          .name-item {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+    .register {
+      &--content {
+        height: 250px;
+        &__title {
+          font-size: 17px;
+        }
+        &__button {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  .pop-up-about {
+    width: calc(100vw - 50px);
+    &--info {
+      padding: 0px 5px 25px;
+      margin-top: 100px;
+
+      &__content {
+        .title {
+          font-size: 18px;
+          margin-bottom: 12px;
+          span {
+            font-size: 24px;
+          }
+        }
+        .desc {
+          font-size: 12px;
+          // overflow-y: scroll;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+$dark-main-color: #29001a;
+$main-color: #441118;
+$button-color: #590238;
+$gold-color: #b39851;
+$text-color: #212529;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+input {
+  outline: unset;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.limit-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 24px;
+  .symbol-mark {
+    width: 25px;
+  }
+  h3 {
+    color: $main-color;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    position: relative;
+
+    &:before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 20%;
+      left: 0px;
+      background-color: #ebebeb;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    padding-right: 16px;
+    background-color: white;
+    position: relative;
+  }
+}
+
+.recent-post {
+  margin-top: 34px;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  box-shadow: unset;
+  background: $main-color;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+//zoom 25%
+
+#main,
+#news-list {
+  min-height: calc(100vh - 710px);
+}
+
+@import "header";
+@import "footer";
+@import "homepage";
+@import "archive";
+@import "single-product";
+@import "nit";
+@import "woocommerce";
+@import "about";
+@import "checkout";
+@import "contact";
+@import "contact-page";
+@import "news-list";
+@import "sidebar";
+@import "single";

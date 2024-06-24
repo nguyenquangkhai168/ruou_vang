@@ -1,0 +1,1 @@
+<?php require_once dirname( __FILE__ ) . '/partials/loop-danh-sach-khuyen-mai.php'; ?>
